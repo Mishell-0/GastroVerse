@@ -94,13 +94,17 @@ subido cada usuario.
  ![](https://github.com/Mishell-0/GastroVerse/blob/main/Captura%20de%20pantalla%202024-01-31%20113711.png?raw=true)
  ## Restricciones Dieteticas
   Indica al usuario la restricción de la receta.
+  
    ![](https://github.com/Mishell-0/GastroVerse/blob/main/Captura%20de%20pantalla%202024-01-31%20113716.png?raw=true)
  ## Tendencias
  Indica la receta más popular y destacada del momento.
+ 
   ![](https://github.com/Mishell-0/GastroVerse/blob/main/Captura%20de%20pantalla%202024-01-31%20113722.png?raw=true)
  ## Usuarios
   Datos de usuarios para poder autentificarse.
+  
    ![](https://github.com/Mishell-0/GastroVerse/blob/main/Captura%20de%20pantalla%202024-01-31%20113727.png?raw=true)
  ## Valoraciones
   Permite calificar las receta
+  
    ![](https://github.com/Mishell-0/GastroVerse/blob/main/Captura%20de%20pantalla%202024-01-31%20113732.png?raw=true)
