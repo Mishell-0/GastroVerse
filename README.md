@@ -3,7 +3,7 @@
 
 ## PROYECTO BDD NOSQL
 
-####Integrantes
+#### Integrantes
 
 -  Guerrero Lorena 
 - Mishell Chiles
@@ -13,7 +13,7 @@
 Nuestro proyecto trata sobre un aplicativo web donde se va a poder publicar recetas y leerlas
 #### Objetivo General
 Diseñar e implementar una base de datos no relacional eficiente para respaldar un aplicativo web de recetas, asegurando la gestión óptima de la información, con el fin de proporcionar una experiencia de usuario fluida y eficaz en la búsqueda, almacenamiento y actualización de recetas culinarias.
-####Marco Teórico
+#### Marco Teórico
 ##### ‎ ‎ ‎ ‎ ‎ ‎‎  Modelo de Datos No Relacional:
 Son sistemas de gestión de bases de datos que proporcionan un enfoque diferente al modelo relacional tradicional. Los modelos NoSQL incluyen bases de datos documentales, de clave-valor, de columnas y de grafos, entre otros.
 #####‎ ‎ ‎ ‎ ‎ ‎ ‎Escalabilidad y Rendimiento:
