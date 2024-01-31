@@ -33,6 +33,7 @@ Se refiere al proceso de transferir datos y adaptar la estructura de la base de 
 ## Autentificaciones 
 Srve para saber de dónde está activa la cuenta, desde que dispositivo 
 y también para manejar el número de intentos para asegurar la información del usuario.
+![](https://raw.githubusercontent.com/Mishell-0/GastroVerse/main/Captura%20de%20pantalla%20(183).png)
 ## Autorizaciones
  Creada para que al momento de iniciar sesión me permita ingresar 
 como administrador o cliente.
