@@ -38,49 +38,69 @@ y también para manejar el número de intentos para asegurar la información del
 ## Autorizaciones
  Creada para que al momento de iniciar sesión me permita ingresar 
 como administrador o cliente.
+![](https://github.com/Mishell-0/GastroVerse/blob/main/Captura%20de%20pantalla%20(184).png?raw=true)
 ## Categorias
  Nos indica el tipo de categoría de nuestra receta y una breve descripción.
+  ![](https://github.com/Mishell-0/GastroVerse/blob/main/Captura%20de%20pantalla%20(185).png?raw=true)
 ## Comentarios
  Permite al usuario dejar un comentario sobre la receta publicada con 
 fecha y hora.
+ ![](https://github.com/Mishell-0/GastroVerse/blob/main/Captura%20de%20pantalla%20(186).png?raw=true)
 ## Consejos de Cocina 
  Permite al usuario dejar una crítica o consejo sobre la receta 
 publicada
+ ![](https://github.com/Mishell-0/GastroVerse/blob/main/Captura%20de%20pantalla%20(188).png?raw=true)
 ## Eventos Especiales
 Esta colección es útil para gestionar y mostrar eventos especiales.
+ ![]()
 ## Favoritos
  Permite al usuario marcar una receta como Fa Con nuestro usuario y contraseña podremos ingresar a la aplicación indicando la vorito.
+  ![]()
 ## Historial
  Permite al usuario guardar las recetas vistas.
+  ![]()
 ## Ingredientes
 Nos permite ver los ingredientes necesarios junto con sus calorías para 
 la elaboración de nuestra receta.
+ ![]()
 ## Intentos
  Indica al usuario el tipo de actividad y dependiendo, mandará un mensaje de inicio exitoso o caso contrario un mensaje fallido.
+  ![]()
 ## Interacciones 
  Indica la interacción realizada por el usuario a la hora y fecha exacta
+  ![]()
 ## Login
  Con nuestro usuario y contraseña podremos ingresar a la aplicación indicando la fecha y hora, dispositivo por el cual se inició sesión.
+  ![]()
  ## Membresias
   Indica el tipo de membresía, el precio y los beneficios que se otorga al 
 usuario.
+ ![]()
  ## Multimedia
   Colección necesaria para dar una vista previa tanto de los ingredientes 
 como la receta.
+ ![]()
  ## Notificaciones
   Envía un tipo de notificación al usuario detectando si fue leída.
+   ![]()
  ## Permisos
  Indica el tipo de permiso para poder acceder al sistema y obtener acciones 
 diferentes.
+ ![]()
  ## Recetas
   Indica el paso a paso y el tiempo de preparación de cada receta que haya 
 subido cada usuario.
+ ![]()
  ## Restricciones Dieteticas
   Indica al usuario la restricción de la receta.
+   ![]()
  ## Tendencias
  Indica la receta más popular y destacada del momento.
+  ![]()
  ## Usuarios
   Datos de usuarios para poder autentificarse.
+   ![]()
  ## Valoraciones
   Permite calificar las receta
+   ![]()
 ### End**
