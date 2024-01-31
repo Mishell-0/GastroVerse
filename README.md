@@ -29,56 +29,56 @@ Se refiere al proceso de transferir datos y adaptar la estructura de la base de 
 - Studio 3T
 - Dispositivo Electronico (Computador)
 
-#COLECCIONES
-##Autentificaciones 
+# COLECCIONES
+## Autentificaciones 
 Srve para saber de dónde está activa la cuenta, desde que dispositivo 
 y también para manejar el número de intentos para asegurar la información del usuario.
-##Autorizaciones
+## Autorizaciones
  Creada para que al momento de iniciar sesión me permita ingresar 
 como administrador o cliente.
-##Categorias
+## Categorias
  Nos indica el tipo de categoría de nuestra receta y una breve descripción.
-##Comentarios
+## Comentarios
  Permite al usuario dejar un comentario sobre la receta publicada con 
 fecha y hora.
-##Consejos de Cocina 
+## Consejos de Cocina 
  Permite al usuario dejar una crítica o consejo sobre la receta 
 publicada
-##Eventos Especiales
+## Eventos Especiales
 Esta colección es útil para gestionar y mostrar eventos especiales.
-##Favoritos
+## Favoritos
  Permite al usuario marcar una receta como Fa Con nuestro usuario y contraseña podremos ingresar a la aplicación indicando la vorito.
-##Historial
+## Historial
  Permite al usuario guardar las recetas vistas.
-##Ingredientes
+## Ingredientes
 Nos permite ver los ingredientes necesarios junto con sus calorías para 
 la elaboración de nuestra receta.
-##Intentos
+## Intentos
  Indica al usuario el tipo de actividad y dependiendo, mandará un mensaje de inicio exitoso o caso contrario un mensaje fallido.
-##Interacciones 
+## Interacciones 
  Indica la interacción realizada por el usuario a la hora y fecha exacta
-##Login
+## Login
  Con nuestro usuario y contraseña podremos ingresar a la aplicación indicando la fecha y hora, dispositivo por el cual se inició sesión.
- ##Membresias
+ ## Membresias
   Indica el tipo de membresía, el precio y los beneficios que se otorga al 
 usuario.
- ##Multimedia
+ ## Multimedia
   Colección necesaria para dar una vista previa tanto de los ingredientes 
 como la receta.
- ##Notificaciones
+ ## Notificaciones
   Envía un tipo de notificación al usuario detectando si fue leída.
- ##Permisos
+ ## Permisos
  Indica el tipo de permiso para poder acceder al sistema y obtener acciones 
 diferentes.
- ##Recetas
+ ## Recetas
   Indica el paso a paso y el tiempo de preparación de cada receta que haya 
 subido cada usuario.
- ##Restricciones Dieteticas
+ ## Restricciones Dieteticas
   Indica al usuario la restricción de la receta.
- ##Tendencias
+ ## Tendencias
  Indica la receta más popular y destacada del momento.
- ##Usuarios
+ ## Usuarios
   Datos de usuarios para poder autentificarse.
- ##Valoraciones
+ ## Valoraciones
   Permite calificar las receta
-###End**
+### End**
