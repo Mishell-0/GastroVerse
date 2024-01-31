@@ -58,6 +58,7 @@ Esta colección es útil para gestionar y mostrar eventos especiales.
   ![](https://github.com/Mishell-0/GastroVerse/blob/main/Captura%20de%20pantalla%202024-01-31%20113607.png?raw=true)
 ## Historial
  Permite al usuario guardar las recetas vistas.
+ 
   ![](https://github.com/Mishell-0/GastroVerse/blob/main/Captura%20de%20pantalla%202024-01-31%20113617.png?raw=true)
 ## Ingredientes
 Nos permite ver los ingredientes necesarios junto con sus calorías para 
