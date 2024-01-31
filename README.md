@@ -24,7 +24,7 @@ Aumentar la capacidad de una base de datos distribuyendo los datos en múltiples
  - Encriptación: Aplicar técnicas de encriptación para proteger datos sensibles almacenados en la base de datos.
 #####‎ Migración y Actualización:
 Se refiere al proceso de transferir datos y adaptar la estructura de la base de datos a una nueva versión o a un sistema diferente. .
-####Recursos Utlizados
+#### Recursos Utlizados
 - MongoDB Atlas
 - Studio 3T
 - Dispositivo Electronico (Computador)
