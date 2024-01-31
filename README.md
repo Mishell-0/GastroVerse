@@ -9,9 +9,9 @@
 - Mishell Chiles
 - Chavéz Kevin
 - Sanchez Juan
-#GASTROVERSE 🥗🍕
+# GASTROVERSE 🥗🍕
 Nuestro proyecto trata sobre un aplicativo web donde se va a poder publicar recetas y leerlas
-####Objetivo General
+#### Objetivo General
 Diseñar e implementar una base de datos no relacional eficiente para respaldar un aplicativo web de recetas, asegurando la gestión óptima de la información, con el fin de proporcionar una experiencia de usuario fluida y eficaz en la búsqueda, almacenamiento y actualización de recetas culinarias.
 ####Marco Teórico
 ##### ‎ ‎ ‎ ‎ ‎ ‎‎  Modelo de Datos No Relacional:
