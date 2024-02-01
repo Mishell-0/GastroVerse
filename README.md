@@ -90,6 +90,7 @@ diferentes.
  ![](https://github.com/Mishell-0/GastroVerse/blob/main/Captura%20de%20pantalla%202024-01-31%20113707.png?raw=true)
 ## Perfiles
  Indica si el perfil de un usuario es publico o privado
+ 
  ![](https://github.com/Mishell-0/GastroVerse/blob/main/PERFILES.png?raw=true)
  
  ## Recetas
