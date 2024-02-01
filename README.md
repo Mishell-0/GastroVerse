@@ -298,5 +298,53 @@ subido cada usuario.
           	"dispositivos": { $exists: true, $gt: 1 }
         	}
      	 }
-    	})
+    	})18.Mostrar los usuarios que han cambiado su contraseña en los últimos 30 días. 
 
+	var fecha_limite_cambio_contraseña = new Date()
+	fecha_limite_cambio_contraseña.setDate(fecha_limite_cambio_contraseña.getDate
+	() - 30)
+	db.Usuarios.find({ "fecha_cambio_contraseña": { $gte:
+	fecha_limite_cambio_contraseña } })
+19.Encontrar usuarios que tengan un perfil público y hayan compartido al menos 3 recetas. 
+
+	db.Usuarios.find({ "perfil_publico": true, "recetas_compartidas.2": { $exists: 		true } })
+20.Obtener la lista de notificaciones enviadas en el último mes, ordenadas por fecha de creación. 
+
+	var fecha_limite_notificaciones = new Date()
+	fecha_limite_notificaciones.setMonth(fecha_limite_notificaciones.getMonth() -
+	1)
+	db.Notificaciones.find({ "fecha_creacion": { $gte:
+	fecha_limite_notificaciones } }).sort({ "fecha_creacion": 1 })
+21.Buscar usuarios que tengan un tiempo total de inicio de sesión superior a 50 horas. 
+
+	db.Usuarios.find({ "tiempo_inicio_sesion": { $gt: 50 } })
+22.Mostrar los roles que tengan permisos de administrador y hayan sido utilizados en las últimas dos semanas. 
+
+	var fecha_limite_roles = new Date()
+	fecha_limite_roles.setDate(fecha_limite_roles.getDate() - 14)
+	db.Roles.find({ "permisos.administrador": true, "fecha_ultimo_uso": { $gte: 	fecha_limite_roles 
+	} })
+23.Encontrar usuarios que hayan iniciado sesión desde un sistema operativo en específico (Android, IOS). 
+
+	db.Usuarios.find({ "historial_inicio_sesion": { $elemMatch: { "dispositivo": "Android" } } })
+24.Obtener la información del perfil de usuario que haya iniciado sesión más recientemente. 
+
+	db.Usuarios.aggregate([
+ 	{
+ 	$sort: { "historial_inicio_sesion.fecha_inicio": -1 }
+ 	},
+ 	{
+ 	$limit: 1
+ 	}
+	])
+25.Buscar usuarios que tengan un nombre que coincida con un patrón de expresión regular. 
+
+	db.Usuarios.find({ "nombre_usuario": { $regex: /usu/ } })
+26. Mostrar los usuarios que hayan iniciado sesión en las últimas 48 horas y tengan al menos un rol de chef
+
+	var fecha_limite_ultima_sesion = new Date()
+	fecha_limite_ultima_sesion.setHours(fecha_limite_ultima_sesion.getHours() -48)
+	db.Usuarios.find({
+	"historial_inicio_sesion.fecha_inicio": { $gte: fecha_limite_ultima_sesion },
+	"roles.nombre": "Chef"
+	})
