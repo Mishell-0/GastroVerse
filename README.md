@@ -108,3 +108,185 @@ subido cada usuario.
   Permite calificar las receta
   
    ![](https://github.com/Mishell-0/GastroVerse/blob/main/Captura%20de%20pantalla%202024-01-31%20113732.png?raw=true)
+
+   
+#### CONSULTAS
+1.Obtener todas las recetas que contengan un ingrediente específico.
+
+	db.Recetas.find({ ingredientes: { $elemMatch: { nombre: "Pollo" } } })
+
+2.Encontrar las recetas que tengan más de 500 calorías y estén ordenadas por tiempo de preparación descendente. 
+
+	db.Recetas.find({ calorias: { $gt: 500 } }).sort({ tiempo_preparacion: -1 })
+3.Mostrar las recetas que fueron creadas por usuarios con un rol de chef.
+
+	db.Recetas.aggregate([
+	  {
+    	$lookup: {
+      	from: "Usuarios",
+      	localField: "creador",
+      	foreignField: "_id",
+      	as: "creador_info"
+    	}
+  	},
+  	{
+    	$unwind: "$creador_info"
+  	},
+  	{
+    	$lookup: {
+      	from: "Roles",
+     	 localField: "creador_info.rol",
+      	foreignField: "_id",
+      	as: "rol_info"
+    	}
+  	},
+  	{
+    	$unwind: "$rol_info"
+  	},
+  	{
+    	$match: {
+      	"rol_info.nombre": "Chef"
+    	}
+  	}
+	])
+
+4.Buscar las recetas que tengan al menos 3 pasos en su proceso de preparación. 
+
+	db.Recetas.find({ $expr: { $gte: [{ $size: "$pasos" }, 3] } })
+
+5.Obtener las recetas que contengan al menos dos etiquetas específicas.
+
+	db.Recetas.find({ etiquetas: { $all: ["Ensalada", "Saludable"] } })
+
+6.Encontrar las recetas más recientes creadas por usuarios con un nivel de habilidad de cocina superior a 3. 
+
+	db.Recetas.aggregate([
+  	{
+    	$lookup: {
+          	from: "Usuarios",
+          	localField: "creador",
+          	foreignField: "_id",
+          	as: "creador_info"
+        	}
+      	},
+      	{
+        	$match: {
+          	"creador_info.nivel_habilidad": { $gt: 3 }
+        	}
+      	},
+      	{
+        	$sort: { fecha_actualizacion: -1 }
+      	}
+    	])
+7.Mostrar las recetas que hayan sido actualizadas en los últimos 7 días. 
+
+ 	var fecha_limite = new Date()
+    	fecha_limite.setDate(fecha_limite.getDate() - 7)
+    	db.Recetas.find({ fecha_actualizacion: { $gte: fecha_limite } })
+8.Buscar las recetas que tengan un nombre que coincida con un patrón de expresión regular.
+
+        	db.Recetas.find({ titulo: { $regex: /Ensalada/ } }) 
+
+9.Obtener las recetas que tengan un tiempo de preparación menor o igual a 30 minutos y estén marcadas como aptas para vegetarianos. 
+
+    	db.Recetas.find({ tiempo_preparacion: { $lte: 30 }, vegetariana: true })
+       
+10.Encontrar las recetas que tengan más de 5 comentarios y ordenarlas por el número de comentarios descendente. 
+
+    	db.Recetas.find({ "comentarios.5": { $exists: true } }).sort({ "comentarios": -1 })
+
+####Consultas para Módulos de Login, Sesiones, Autenticación, Roles, Notificaciones, Perfiles de Usuario, etc.: 
+12.Obtener la información del perfil de usuario, incluyendo su historial de inicio de sesión, notificaciones y roles. 
+
+    	db.Usuarios.aggregate([
+    	{
+    	$lookup: {
+    	from: "Sesiones",
+    	localField: "_id",
+    	foreignField: "usuario",
+    	as: "historial_inicio_sesion"
+    	}
+    	},
+    	{
+    	$lookup: {
+    	from: "Roles",
+    	localField: "roles",
+    	foreignField: "_id",
+    	as: "roles_info"
+    	}
+    	},
+    	{
+    	$lookup: {
+    	from: "Notificaciones",
+    	localField: "_id",
+    	foreignField: "usuario",
+    	as: "notificaciones"
+    	}
+    	}
+    	])
+13.Buscar usuarios que tengan más de 3 notificaciones no leídas.
+
+    	db.Usuarios.aggregate([
+    	{
+    	$unwind: "$notificaciones" // Desdobla el array de notificaciones
+    	},
+    	{
+    	$match: {
+    	"notificaciones.leida": false
+    	}
+    	},
+    	{
+    	$group: {
+    	_id: "$_id",
+    	total_notificaciones_no_leidas: { $sum: 1 } // Contador de notificaciones     	no leídas por usuario
+    	}
+    	},
+    	{
+    	$match: {
+    	total_notificaciones_no_leidas: { $gt: 3 } // Filtra aquellos con más de 3      	notificaciones no leídas
+    	}
+    	},
+    	{
+    	$project: {
+    	_id: 1,
+    	nombre: 1
+    	}
+    	}
+    	])
+
+ 14.Mostrar los usuarios que tengan un rol específico y hayan iniciado sesión en las últimas 24 horas. 
+ 
+    	var fecha_limite = new Date()
+    	fecha_limite.setDate(fecha_limite.getDate() - 1)
+    	db.Usuarios.aggregate([
+    	{
+    	$lookup: {
+    	from: "Sesiones",
+    	localField: "_id",
+    	foreignField: "usuario",
+    	as: "historial_inicio_sesion"
+    	}
+    	},
+    	{
+    	$match: {
+    	"historial_inicio_sesion.fecha_inicio": { $gte: fecha_limite },
+    	"roles_info.nombre": "Usuario" 
+    	}
+    	}
+    	])
+15. Encontrar los usuarios que tengan un nivel de autenticación de dos factores activado. 
+
+    	db.Usuarios.find({ "autenticacion_dos_factores": true })
+16. Obtener la lista de roles disponibles en el sistema, ordenados alfabéticamente. 
+
+    	db.Roles.find().sort({ "nombre": 1 })
+17. Buscar usuarios que tengan una sesión activa en más de un dispositivo. 
+
+    	db.Usuarios.find({
+      	"historial_inicio_sesion": {
+        	$elemMatch: {
+          	"dispositivos": { $exists: true, $gt: 1 }
+        	}
+     	 }
+    	})
+
