@@ -63,16 +63,16 @@ Esta colección es útil para gestionar y mostrar eventos especiales.
 ## Ingredientes
 Nos permite ver los ingredientes necesarios junto con sus calorías para 
 la elaboración de nuestra receta.
- ![](https://github.com/Mishell-0/GastroVerse/blob/main/Captura%20de%20pantalla%202024-01-31%20113627.png?raw=true)
+ ![](https://github.com/Mishell-0/GastroVerse/blob/main/INGREDIENTES.png?raw=true)
 ## Intentos
  Indica al usuario el tipo de actividad y dependiendo, mandará un mensaje de inicio exitoso o caso contrario un mensaje fallido.
   ![](https://github.com/Mishell-0/GastroVerse/blob/main/Captura%20de%20pantalla%202024-01-31%20113634.png?raw=true)
 ## Interacciones 
  Indica la interacción realizada por el usuario a la hora y fecha exacta
   ![](https://github.com/Mishell-0/GastroVerse/blob/main/Captura%20de%20pantalla%202024-01-31%20113640.png?raw=true)
-## Login
+## Sesiones
  Con nuestro usuario y contraseña podremos ingresar a la aplicación indicando la fecha y hora, dispositivo por el cual se inició sesión.
-  ![](https://github.com/Mishell-0/GastroVerse/blob/main/Captura%20de%20pantalla%202024-01-31%20113645.png?raw=true)
+  ![](https://github.com/Mishell-0/GastroVerse/blob/main/SESIONES.png?raw=true)
  ## Membresias
   Indica el tipo de membresía, el precio y los beneficios que se otorga al 
 usuario.
@@ -83,19 +83,28 @@ como la receta.
  ![](https://github.com/Mishell-0/GastroVerse/blob/main/Captura%20de%20pantalla%202024-01-31%20113656.png?raw=true)
  ## Notificaciones
   Envía un tipo de notificación al usuario detectando si fue leída.
-   ![](https://github.com/Mishell-0/GastroVerse/blob/main/Captura%20de%20pantalla%202024-01-31%20113701.png?raw=true)
+   ![](https://github.com/Mishell-0/GastroVerse/blob/main/NOTIFICACIONES.png?raw=true)
  ## Permisos
  Indica el tipo de permiso para poder acceder al sistema y obtener acciones 
 diferentes.
  ![](https://github.com/Mishell-0/GastroVerse/blob/main/Captura%20de%20pantalla%202024-01-31%20113707.png?raw=true)
+## Perfiles
+ Indica si el perfil de un usuario es publico o privado
+ ![](https://github.com/Mishell-0/GastroVerse/blob/main/PERFILES.png?raw=true)
+ 
  ## Recetas
   Indica el paso a paso y el tiempo de preparación de cada receta que haya 
 subido cada usuario.
- ![](https://github.com/Mishell-0/GastroVerse/blob/main/Captura%20de%20pantalla%202024-01-31%20113711.png?raw=true)
+ ![](https://github.com/Mishell-0/GastroVerse/blob/main/RECETAS.png?raw=true)
  ## Restricciones Dieteticas
   Indica al usuario la restricción de la receta.
   
    ![](https://github.com/Mishell-0/GastroVerse/blob/main/Captura%20de%20pantalla%202024-01-31%20113716.png?raw=true)
+## Roles
+  Indica que rol cumple en el aplicativo cada usuario
+  
+   ![](https://github.com/Mishell-0/GastroVerse/blob/main/ROLES.png?raw=true)
+   
  ## Tendencias
  Indica la receta más popular y destacada del momento.
  
@@ -103,7 +112,7 @@ subido cada usuario.
  ## Usuarios
   Datos de usuarios para poder autentificarse.
   
-   ![](https://github.com/Mishell-0/GastroVerse/blob/main/Captura%20de%20pantalla%202024-01-31%20113727.png?raw=true)
+   ![](https://github.com/Mishell-0/GastroVerse/blob/main/USUARIOS.png?raw=true)
  ## Valoraciones
   Permite calificar las receta
   
