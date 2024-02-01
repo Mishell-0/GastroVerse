@@ -299,13 +299,14 @@ subido cada usuario.
         	}
      	 }
     	})
-    18.Mostrar los usuarios que han cambiado su contraseña en los últimos 30 días. 
+    18.Mostrar los usuarios que han cambiado su contraseña en los últimos 30 días.
+    
+		var fecha_limite_cambio_contraseña = new Date()
+		fecha_limite_cambio_contraseña.setDate(fecha_limite_cambio_contraseña.getDate
+		() - 30)
+		db.Usuarios.find({ "fecha_cambio_contraseña": { $gte:
+		fecha_limite_cambio_contraseña } })
 
-	var fecha_limite_cambio_contraseña = new Date()
-	fecha_limite_cambio_contraseña.setDate(fecha_limite_cambio_contraseña.getDate
-	() - 30)
-	db.Usuarios.find({ "fecha_cambio_contraseña": { $gte:
-	fecha_limite_cambio_contraseña } })
 19.Encontrar usuarios que tengan un perfil público y hayan compartido al menos 3 recetas. 
 
 	db.Usuarios.find({ "perfil_publico": true, "recetas_compartidas.2": { $exists: 		true } })
@@ -343,9 +344,9 @@ subido cada usuario.
 	db.Usuarios.find({ "nombre_usuario": { $regex: /usu/ } })
 26. Mostrar los usuarios que hayan iniciado sesión en las últimas 48 horas y tengan al menos un rol de chef
 
-	var fecha_limite_ultima_sesion = new Date()
-	fecha_limite_ultima_sesion.setHours(fecha_limite_ultima_sesion.getHours() -48)
-	db.Usuarios.find({
-	"historial_inicio_sesion.fecha_inicio": { $gte: fecha_limite_ultima_sesion },
-	"roles.nombre": "Chef"
-	})
+		var fecha_limite_ultima_sesion = new Date()
+		fecha_limite_ultima_sesion.setHours(fecha_limite_ultima_sesion.getHours() -48)
+		db.Usuarios.find({
+		"historial_inicio_sesion.fecha_inicio": { $gte: fecha_limite_ultima_sesion },
+		"roles.nombre": "Chef"
+		})
