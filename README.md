@@ -298,7 +298,8 @@ subido cada usuario.
           	"dispositivos": { $exists: true, $gt: 1 }
         	}
      	 }
-    	})18.Mostrar los usuarios que han cambiado su contraseña en los últimos 30 días. 
+    	})
+    18.Mostrar los usuarios que han cambiado su contraseña en los últimos 30 días. 
 
 	var fecha_limite_cambio_contraseña = new Date()
 	fecha_limite_cambio_contraseña.setDate(fecha_limite_cambio_contraseña.getDate
